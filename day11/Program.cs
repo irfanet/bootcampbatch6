@@ -26,6 +26,7 @@
 		myQ.Enqueue(1);
 		myQ.Enqueue(2);
 		myQ.Enqueue(3);
+		myQ.Enqueue(8);
 		
 		myQ.Peek();
 		

@@ -31,6 +31,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day10", "day10\day10.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day11", "day11\day11.csproj", "{E4FC2B31-6B0B-47A7-B6B7-47DCDD940C86}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotMemory", "dotMemory\dotMemory.csproj", "{5021F1D0-F511-461E-865F-4866C6E95124}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -96,5 +98,9 @@ Global
 		{E4FC2B31-6B0B-47A7-B6B7-47DCDD940C86}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E4FC2B31-6B0B-47A7-B6B7-47DCDD940C86}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E4FC2B31-6B0B-47A7-B6B7-47DCDD940C86}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5021F1D0-F511-461E-865F-4866C6E95124}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5021F1D0-F511-461E-865F-4866C6E95124}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5021F1D0-F511-461E-865F-4866C6E95124}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5021F1D0-F511-461E-865F-4866C6E95124}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

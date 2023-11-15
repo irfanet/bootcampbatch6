@@ -33,6 +33,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day11", "day11\day11.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "dotMemory", "dotMemory\dotMemory.csproj", "{5021F1D0-F511-461E-865F-4866C6E95124}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "disposal", "disposal\disposal.csproj", "{FEEAE851-9B5B-436B-A37D-D008FDB949B0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day19", "day19\day19.csproj", "{BE384953-1A27-49BD-A776-A64AEBEB963D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day19-taskAsync", "day19-taskAsync\day19-taskAsync.csproj", "{EB68540A-95E0-4729-9C77-473772A50323}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day17", "day17\day17.csproj", "{85BD9B8C-8417-4634-9BB1-69E60E059C95}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -102,5 +110,21 @@ Global
 		{5021F1D0-F511-461E-865F-4866C6E95124}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5021F1D0-F511-461E-865F-4866C6E95124}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5021F1D0-F511-461E-865F-4866C6E95124}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEEAE851-9B5B-436B-A37D-D008FDB949B0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEEAE851-9B5B-436B-A37D-D008FDB949B0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEEAE851-9B5B-436B-A37D-D008FDB949B0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEEAE851-9B5B-436B-A37D-D008FDB949B0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE384953-1A27-49BD-A776-A64AEBEB963D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE384953-1A27-49BD-A776-A64AEBEB963D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE384953-1A27-49BD-A776-A64AEBEB963D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE384953-1A27-49BD-A776-A64AEBEB963D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB68540A-95E0-4729-9C77-473772A50323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB68540A-95E0-4729-9C77-473772A50323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB68540A-95E0-4729-9C77-473772A50323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB68540A-95E0-4729-9C77-473772A50323}.Release|Any CPU.Build.0 = Release|Any CPU
+		{85BD9B8C-8417-4634-9BB1-69E60E059C95}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85BD9B8C-8417-4634-9BB1-69E60E059C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85BD9B8C-8417-4634-9BB1-69E60E059C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{85BD9B8C-8417-4634-9BB1-69E60E059C95}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

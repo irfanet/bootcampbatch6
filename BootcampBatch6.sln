@@ -41,6 +41,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day19-taskAsync", "day19-ta
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "day17", "day17\day17.csproj", "{85BD9B8C-8417-4634-9BB1-69E60E059C95}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarvelSnap", "MarvelSnap\MarvelSnap.csproj", "{435A6022-5BA5-41DE-87C8-7821B5C9BA50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MarvelSnapTest", "MarvelSnapTest\MarvelSnapTest.csproj", "{B9E96AD0-7981-41B7-A93C-8315A20839FF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -126,5 +130,13 @@ Global
 		{85BD9B8C-8417-4634-9BB1-69E60E059C95}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{85BD9B8C-8417-4634-9BB1-69E60E059C95}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{85BD9B8C-8417-4634-9BB1-69E60E059C95}.Release|Any CPU.Build.0 = Release|Any CPU
+		{435A6022-5BA5-41DE-87C8-7821B5C9BA50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{435A6022-5BA5-41DE-87C8-7821B5C9BA50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{435A6022-5BA5-41DE-87C8-7821B5C9BA50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{435A6022-5BA5-41DE-87C8-7821B5C9BA50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9E96AD0-7981-41B7-A93C-8315A20839FF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9E96AD0-7981-41B7-A93C-8315A20839FF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9E96AD0-7981-41B7-A93C-8315A20839FF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9E96AD0-7981-41B7-A93C-8315A20839FF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

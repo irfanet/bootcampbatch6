@@ -15,8 +15,7 @@ class Program
 		#else
 		Console.WriteLine("mode suka suka");
 		#endif
-		
-		
+			
 		
 	}
 	

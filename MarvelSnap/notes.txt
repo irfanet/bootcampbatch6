@@ -1,0 +1,39 @@
+					// if (turnCounter == 1)
+					// {
+					// 	$"-------------- Card Id : {y.GetId()} ---------------".Dump();
+					// 	$"Cost: {y.GetEnergyCost()} \t\t\t".DumpThis();
+					// 	$"Power: {y.GetPower()}".Dump();
+					// 	$"\t\t {y.GetName()}".Dump();
+					// 	$"< {y.GetDescription()} >".Dump();
+					// 	Console.WriteLine("------------------------------------------");
+					// 	y.RevealCard();
+					// 	CardLimit++;
+					// 	if (CardLimit == 4)
+					// 	{
+					// 		break;
+					// 	}
+					// }
+					// else
+					// {
+					// 	if (!y.IsReveal())
+					// 	{
+					// 		CardLimit = 0;
+					// 		$"-------------- Card Id : {y.GetId()} ---------------".Dump();
+					// 		$"Cost: {y.GetEnergyCost()} \t\t\t".DumpThis();
+					// 		$"Power: {y.GetPower()}".Dump();
+					// 		$"\t\t {y.GetName()}".Dump();
+					// 		$"< {y.GetDescription()} >".Dump();
+					// 		Console.WriteLine("------------------------------------------");
+					// 		y.RevealCard();
+					// 		CardLimit++;
+					// 		if (CardLimit == 1)
+					// 		{
+					// 			break;
+					// 		}
+					// 	}
+					// }
+
+                    playerdata + on hand
+                    playerdata implement next turn to get current player
+                    current round & maxTurn implement to gc due to dynamic skill
+                    just shuffle the goddamn card

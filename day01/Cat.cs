@@ -2,7 +2,6 @@ class Cat
 
 {
 	public string colour;
-	
 	public int leg;
 	public bool isTailLong;
 	public int weight;

@@ -17,10 +17,13 @@ public class Car
 	}
 	public void EngineCheck()
 	{
-		// Console.WriteLine(engine);
+		Console.WriteLine($"jenis mesin: {mesin.engineType}");
 	}
 	public void TireCheck() 
 	{
-		// Console.WriteLine(tire);
+		Console.WriteLine($"jenis ban: {ban.tireMaterial}");
+	}
+	public void LampCheck(){
+		Console.WriteLine($"jenis lampu: {lamp.lampIngredients}");
 	}
 }

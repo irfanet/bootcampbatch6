@@ -11,5 +11,8 @@ class Program
 		Lamp osram = new Lamp();
 		
 		Car car = new Car(diesel, hancock, osram);
+		car.EngineCheck();
+		car.TireCheck();
+		car.LampCheck();
 	}
 }

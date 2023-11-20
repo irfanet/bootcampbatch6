@@ -11,7 +11,7 @@ public class Location
 	private string _effect;
 	private int _turn;
 	private List<Card> _listCards = new();
-	private Dictionary<Player, List<Card>> _listCardsOnLocation = new();
+	private Dictionary<Player, List<Card>> _cardsOnLocation = new();
 	
 	public Location(int id, string name, string effect, int turn)
 	{
@@ -22,15 +22,11 @@ public class Location
 	}
 
 	public void AddCardsToLocation(Player players, Card cards){
-		if(_listCardsOnLocation==null)
-		{
-			// _listCardsOnLocation.Add(players)			
-		}
-		_listCardsOnLocation[players].Add(cards);
+		_cardsOnLocation[players].Add(cards);
 	}
 
 	public Dictionary<Player, List<Card>> GetCardsOnLocation(){
-		return _listCardsOnLocation;
+		return _cardsOnLocation;
 	}
 
 	public string GetName(){

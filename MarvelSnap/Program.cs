@@ -109,6 +109,8 @@ class Program
 		while (turnCounter <= maxTurn)
 		{
 			turnCounter++;
+			bool isFirstTurn = turnCounter == 1 ? true : false;
+			isFirstTurn.Dump();
 			foreach (var e in playerData)
 			{
 				e.Value.SetEnergy(turnCounter);
@@ -118,18 +120,17 @@ class Program
 				// Console.WriteLine(e.Value.GetScore());
 
 				int CardLimit = 0;
-				foreach (var y in e.Value.GetPlayerCards().Take(6))
+				foreach (var y in e.Value.SetCardsOnHand(isFirstTurn))
 				{
-					if (!y.isUsed())
-					{
-						$"-------------- Card Id : {y.GetId()} ---------------".Dump();
-						$"Cost: {y.GetEnergyCost()} \t\t\t".DumpThis();
-						$"Power: {y.GetPower()}".Dump();
-						$"\t\t {y.GetName()}".Dump();
-						$"[ {y.GetDescription()} ]".Dump();
-						Console.WriteLine("------------------------------------------");
-						y.RevealCard();
-					}
+					// if (!y.IsUsed())
+					// {
+					$"-------------- Card Id : {y.GetId()} ---------------".Dump();
+					$"Cost: {y.GetEnergyCost()} \t\t\t".DumpThis();
+					$"Power: {y.GetPower()}".Dump();
+					$"\t\t {y.GetName()}".Dump();
+					$"[ {y.GetDescription()} ]".Dump();
+					Console.WriteLine("------------------------------------------");
+					// }
 
 				}
 
@@ -140,25 +141,32 @@ class Program
 					$"{locationElement.GetId()}. {locationElement.GetName()}".DumpThis();
 					locationElement.GetEffect().Dump();
 				}
-				bool isCorrectInput = false;
-				while (!isCorrectInput)
+				bool isEndTurn = false;
+				while (!isEndTurn)
 				{
 					"Pick your card: ".Dump();
+					"0: EndTurn 00: Retreat".Dump();
 					int inputCard = int.Parse(Console.ReadLine());
-					if (e.Value.GetCard(inputCard).GetEnergyCost() <= e.Value.GetEnergy())
+					if (inputCard == 0)
+					{
+						isEndTurn = true;
+					}
+					else if (e.Value.GetCard(inputCard).GetEnergyCost() <= e.Value.GetEnergy())
 					{
 						"Success select card".Dump();
-						e.Value.GetCard(inputCard).UseCard();
-						isCorrectInput = true;
+						e.Value.GetCard(inputCard).MarkOnLocation();
+						"Select location: ".Dump();
+						int? inputLocation = int.Parse(Console.ReadLine());
+						gameController.GetLocation(inputLocation);
 					}
-					"ERROR! Lack Energy".Dump();
+					else
+					{
+						"ERROR! Lack of Energy".Dump();
+					}
 				}
+				// Console.Clear();
+				"".Dump();
 
-
-				"Select location: ".Dump();
-				int? inputLocation = int.Parse(Console.ReadLine());
-				inputLocation?.Dump();
-				Console.Clear();
 			}
 		}
 		// Console.WriteLine(game.CheckWinner());

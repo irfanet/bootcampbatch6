@@ -2,8 +2,7 @@ namespace MarvelSnap.card;
 
 public interface ICard
 {
-	int GetId();
-	string GetImage();
+	HashSet<int> GetId();
 	string GetName();
 	CardType GetType();
 	int GetPower();

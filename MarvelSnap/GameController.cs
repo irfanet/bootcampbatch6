@@ -14,6 +14,9 @@ public class GameController
 	private Dictionary<Location, List<Card>> _cardsOnLocation = new();
 	private Dictionary<Player, List<Card>> _cardsOnDeck = new();
 
+
+	private Card _card;
+
 	private List<Location> _locations = new();
 
 
@@ -106,9 +109,23 @@ public class GameController
 		Console.WriteLine($"{players.GetName()} {result}");
 	}
 
-	public IEnumerable<Location> GetLocation(int? locationId){
-		return _locations.Where(location => location.GetId() == locationId);
+	public Location GetLocation(int? locationId){
+		return _locations.FirstOrDefault(location => location.GetId() == locationId);
 	}
+
+	public void SetCardsToLocation(Player player, Card card, Location location){
+		
+		location.AddCardsToLocation(player, card);
+	}
+
+	public void AddLocation(Location location){
+		_locations.Add(location);
+	}
+
+	public IEnumerable<Location> GetLocations(){
+		return _locations;
+	}
+
 
 
 

@@ -2,9 +2,8 @@ namespace MarvelSnap.card;
 
 public class Card : ICard
 {
-	private int _id;
+	private HashSet<int> _id;
 	private string _name;
-	private string _image;
 	private CardType _type;
 	private int _power;
 	private int _energyCost;
@@ -12,11 +11,10 @@ public class Card : ICard
 	private bool _isOnLocation = false;
 	private bool _isOnHand = false;
 	
-	public Card(int id, string name, string image, CardType type, int energyCost, int power, string description)
+	public Card(string name, CardType type, int energyCost, int power, string description)
 	{
-		_id = id;
+		_id = new HashSet<int>();
 		_name = name;
-		_image = image;
 		_type = type;
 		_energyCost = energyCost;
 		_power = power;
@@ -33,15 +31,11 @@ public class Card : ICard
 		return _energyCost;
 	}
 
-	public int GetId()
+	public HashSet<int> GetId()
 	{
 		return _id;
 	}
-
-	public string GetImage()
-	{
-		return _image;
-	}
+	
 
 	public string GetName()
 	{

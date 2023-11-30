@@ -14,7 +14,7 @@ public class PlayerData
 
     public PlayerData(List<Card> cards, PlayerStatus status)
     {
-        _cardsOnDeck = cards;
+        _cardsOnDeck = ShuffleCards(cards);
         _score = 0;
         _energy = 1;
         _status = status;
@@ -57,7 +57,7 @@ public class PlayerData
 
     public Card GetCard(int id)
     {
-        return _cardsOnDeck[id];
+        return _cardsOnHand[id];
     }
 
 
@@ -65,30 +65,28 @@ public class PlayerData
     {
         if (_cardsOnHand.Count() >= 6)
         {
-            return _cardsOnHand.Where(card => card.IsOnLocation() == false);
+            return _cardsOnHand;
         }
 
         if (isFirstTurn)
         {
-            var shuffle = ShuffleCards(_cardsOnDeck);
-            foreach (var cards in shuffle.Take(4))
+            foreach (var card in _cardsOnDeck.Take(4))
             {
-                cards.MarkOnHand();
-                _cardsOnHand.Add(cards);
+                _cardsOnDeck.Remove(card);
+                _cardsOnHand.Add(card);
             }
 
             return _cardsOnHand;
         }
 
-        Card card = _cardsOnDeck.First(card => card.IsOnHand() == false);
-
-        card.MarkOnHand();
-        _cardsOnHand.Add(card);
+        Card oneCard = _cardsOnDeck.FirstOrDefault();
+        _cardsOnDeck.Remove(oneCard);
+        _cardsOnHand.Add(oneCard);
 
         return _cardsOnHand;
     }
 
-    private IEnumerable<Card> ShuffleCards(List<Card> cards)
+    private List<Card> ShuffleCards(List<Card> cards)
     {
         Random random = new Random();
         int n = cards.Count;
@@ -104,12 +102,25 @@ public class PlayerData
 
     public IEnumerable<Card> GetCardsOnHand()
     {
-        return _cardsOnHand.Where(card => card.IsOnHand() == false && card.IsOnLocation() == false);
+        return _cardsOnHand;
     }
 
-    public void RemoveCard(int index)
+    public void RemoveCardFromHand(int index)
     {
-        Console.WriteLine($"hapus {_cardsOnHand[index]}");
         _cardsOnHand.RemoveAt(index);
+    }
+
+    public void RemoveCardFromDeck(Card card)
+    {
+        _cardsOnDeck.Remove(card);
+    }
+
+    public void PrintCards()
+    {
+        foreach (var p in _cardsOnHand)
+        {
+            Console.WriteLine(p.GetName());
+            Console.WriteLine(p.GetPower());
+        }
     }
 }

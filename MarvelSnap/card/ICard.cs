@@ -10,5 +10,4 @@ public interface ICard
 	string GetDescription();
 	void Skill();
 	
-	bool IsOnLocation();
 }

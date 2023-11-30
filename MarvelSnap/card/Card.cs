@@ -8,8 +8,7 @@ public class Card : ICard
 	private int _power;
 	private int _energyCost;
 	private string _description;
-	private bool _isOnLocation = false;
-	private bool _isOnHand = false;
+
 	
 	public Card(string name, CardType type, int energyCost, int power, string description)
 	{
@@ -57,19 +56,7 @@ public class Card : ICard
 		return _type;
 	}
 	
-	public void MarkOnLocation(){
-		_isOnLocation = true;
-	}
-	public bool IsOnLocation()
-	{
-		return _isOnLocation;
-	}
-	public void MarkOnHand(){
-		_isOnHand = true;
-	}
-	public bool IsOnHand(){
-		return _isOnHand;
-	}
+
 	
 	
 
